@@ -49,7 +49,7 @@ func main() {
 	defer conn.Close()
 
 	for {
-		buf := make([]byte, 2000)
+		buf := make([]byte, 9000)
 		n, peerIpAddress, _ := conn.ReadFrom(buf)
 		if err != nil {
 			log.Printf("error reading from buffer, exiting: %+v", err)
